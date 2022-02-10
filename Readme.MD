@@ -1,7 +1,9 @@
 # MineSweeper API
 
 ### Set up
-To set this API up please ensure that you have NodeJS installed on the machine.
+To set this API up please ensure that you have NodeJS installed on the machine.  
+Run _npm install_ on the terminal to ensure that the required libraries are install.  
+Run _node index.js_ from the terminal standing on the project folder.    
 MongoDB should be up and listening on default port (27017).
 ___
 
