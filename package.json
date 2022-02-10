@@ -1,0 +1,19 @@
+{
+  "name": "node-minesweeper-api",
+  "version": "1.0.0",
+  "description": "API providing minesweeper store and recover session capabilities",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "mongodb": "^4.3.1",
+    "response-format": "^1.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
