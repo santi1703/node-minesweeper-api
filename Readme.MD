@@ -18,7 +18,7 @@ The available endpoints are:
 `GET` ```{BaseURL}/{field_id}``` Fetches from storage the field with the id value `field_id` and returns it on the `data` attribute of the response JSON.
 If there is no stored field with the provided `field_id` value, it creates a fresh one.
 
-`POST` ```{BaseURL}/{field_id}``` Updates from storage the field with the id value `field_id`, 
+`POST` ```{BaseURL}/{field_id}``` Updates into storage the field with the id value `field_id`, 
 updates it with the data you provided, and returns the result on the `data` attribute of the response. 
 If there is no stored field with the provided `field_id` value, it does not modify any stored field, and returns *null*
 on the `data` field of the response.
