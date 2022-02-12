@@ -40,6 +40,7 @@ http.createServer(function (req, res) {
             // If no document is found with the given id, it saves the minefield instance into the DB
             if(dbDocument === null) {
               field = getNewDocument(db, dbo, field);
+              
               fresh.isFresh = true;
               status.status = 'created';              
             } else {
@@ -99,7 +100,6 @@ http.createServer(function (req, res) {
           res.write(response);
           res.end();
         })
-
       });
     });    
   } else {
