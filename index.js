@@ -101,14 +101,12 @@ http.createServer(function (req, res) {
         })
 
       });
-      // res.write('Data updated');
-      // res.end();
     });    
   } else {
     res.write('Method not implemented');
     res.end();
   }
-}).listen(80);
+}).listen(8080);
 
 
 function getNewDocument(db, dbo, field) {
