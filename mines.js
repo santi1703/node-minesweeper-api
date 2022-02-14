@@ -11,12 +11,10 @@ class MineField {
 		var minePositions = this.setMines(this.width, this.height, this.mines);
 
 		for (var i = 0; i < this.height; i++) {
-			var row = [];
 			for (var j = 0; j < this.width; j++) {
-				var mine = new Square(this, i, j, this.hasMine(minePositions, i, j));
-				row[j] = mine;
+				var mine = new Square(i, j, this.hasMine(minePositions, i, j))
+				field.push(mine);
 			}
-			field[i] = row;
 		}
 
 		return field;
@@ -28,8 +26,8 @@ class MineField {
 
 		while(remainingMines > 0)
 		{
-			var xPos = Math.floor( Math.random() * this.height);
-			var yPos = Math.floor( Math.random() * this.width);
+			var xPos = Math.floor( Math.random() * this.width);
+			var yPos = Math.floor( Math.random() * this.height);
 			if(!minePositions.some(e => e[0] === xPos && e[1] === yPos)) {
 				minePositions.push([xPos, yPos]);
 				remainingMines--;
@@ -182,5 +180,5 @@ class Square {
 	}
 }
 
-// exports.MineField = MineField;
-// exports.Square = Square;
+exports.MineField = MineField;
+exports.Square = Square;
