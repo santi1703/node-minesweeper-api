@@ -7,12 +7,12 @@ class MineField {
     }
 
     generateField() {
-        var field = [];
-        var minePositions = this.setMines(this.width, this.height, this.mines);
+        let field = [];
+        let minePositions = this.setMines(this.width, this.height, this.mines);
 
-        for (var i = 0; i < this.width; i++) {
-            for (var j = 0; j < this.height; j++) {
-                var square = new Square(i, j, this.hasMine(minePositions, i, j));
+        for (let i = 0; i < this.width; i++) {
+            for (let j = 0; j < this.height; j++) {
+                let square = new Square(i, j, this.hasMine(minePositions, i, j));
                 field.push(square);
             }
         }
@@ -21,12 +21,12 @@ class MineField {
     }
 
     setMines() {
-        var remainingMines = this.mines;
-        var minePositions = [];
+        let remainingMines = this.mines;
+        let minePositions = [];
 
         while (remainingMines > 0) {
-            var xPos = Math.floor(Math.random() * this.width);
-            var yPos = Math.floor(Math.random() * this.height);
+            let xPos = Math.floor(Math.random() * this.width);
+            let yPos = Math.floor(Math.random() * this.height);
             if (!minePositions.some(e => e[0] === xPos && e[1] === yPos)) {
                 minePositions.push([xPos, yPos]);
                 remainingMines--;
@@ -42,9 +42,9 @@ class MineField {
 }
 
 class Square {
-    constructor(x, y, hasMine, isVisible = false) {
-        this.x = x;
-        this.y = y;
+    constructor(column, row, hasMine, isVisible = false) {
+        this.column = column;
+        this.row = row;
         this.hasMine = hasMine;
         this.isVisible = isVisible;
     }
