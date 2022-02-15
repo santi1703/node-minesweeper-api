@@ -10,7 +10,7 @@ const mongoCollection = "minefields";
 
 const express = require('express');
 const app = express();
-const port = 80;
+const port = 8080;
 app.use(express.json());
 
 // This attribute should determine if the fetched MineField was just created or if it is loaded from storage
